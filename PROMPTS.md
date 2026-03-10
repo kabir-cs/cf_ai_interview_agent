@@ -30,3 +30,18 @@ Below are the specific contextual prompts I used during the development lifecycl
 **Context:** The starter application shipped with an uncontrollable OS level dark mode interceptor. I needed to isolate the application solely to a Light theme to match specific Cloudflare branding guidelines.
 **Prompt:**
 > *"I need to surgically remove any dark mode media query listeners and localStorage theme overrides from the base index.html script in a Vite React stack. I want to statically lock document.documentElement.style.colorScheme to strictly light and strip out all Tailwind dark prefixed utility classes across the application component tree. Provide a foolproof method to guarantee a locked light mode aesthetic that forces the browser rendering engine to ignore system preferences."*
+
+## 6. Securing the Edge Data Pipeline
+**Context:** When the React client submits a chat message to the Agent websocket, I needed to guarantee that malicious payloads could not corrupt the CandidateState object or trigger prompt injection vulnerabilities within the LLM context.
+**Prompt:**
+> *"I am utilizing Cloudflare Workers AI with the Meta Llama 3 70b instruct model. My user input is sent from a React frontend directly into the server streamText handler. To prevent prompt injection and ensure secure data handling, what are the best architectural practices using native Cloudflare APIs to parse, sanitize, and validate incoming websocket messages before they are processed by the AI and stored in the Durable Object storage?"*
+
+## 7. Optimizing Frontend Delivery via the Global CDN
+**Context:** To ensure the Vite React application loads instantly regardless of the user location, I wanted to maximize static asset caching on the Cloudflare global network while preventing stale data during active interview sessions.
+**Prompt:**
+> *"The frontend of my application is a standard Vite React build deployed alongside my Cloudflare Worker. To ensure lightning fast delivery, I want the Cloudflare CDN to aggressively cache static Javascript and CSS assets. However, I must ensure that the websocket connections to the Durable Object are completely exempt from this caching. What specific caching headers and network configurations should I implement in my worker deployment to achieve this optimal balance?"*
+
+## 8. Architecting Resilient React State Structures
+**Context:** As the interview progresses, the dashboard needs to instantly reflect complex nested metric changes such as the current score fraction and individual skill proficiencies, without triggering expensive DOM repaints across the entire application interface.
+**Prompt:**
+> *"Within my Vite application, the Live Progress dashboard consumes complex nested data from the Cloudflare Agent. Specifically, the metrics include fractional scores and arrays of string based strengths. To maintain a smooth user experience, what advanced React rendering strategies, such as memoization or selective context distribution, should I apply to completely eliminate unnecessary component renders when only a specific subset of the CandidateState is updated via the edge network?"*
