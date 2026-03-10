@@ -44,17 +44,31 @@ The "Clear" functionality manually triggers an RPC endpoint (`resetState()`) tha
 
 ## 💻 Local Development
 
-1. Clone the repository and install dependencies:
-```bash
-npm install
-```
+To run this application locally on your machine, follow these detailed steps:
 
-2. Start the Vite development server locally:
-```bash
-npm run dev
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/kabir-cs/cf-ai-interview-agent.git
+   cd cf-ai-interview-agent
+   ```
 
-Visit `http://localhost:5174` to interact with your local agent.
+2. **Install Node.js dependencies**:
+   Ensure you are using Node 20 or higher (we recommend `nvm use 24` if using NVM).
+   ```bash
+   npm install
+   ```
+
+3. **Start the Vite Development Server**:
+   This command starts the local Vite frontend and the Wrangler local simulator for the Workers backend.
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the Application**:
+   Once the server is completely spun up (usually ~4 seconds), open your browser and navigate to the local port specified by Vite, typically:
+   [http://localhost:5173](http://localhost:5173) or [http://localhost:5174](http://localhost:5174)
+
+You can now interact with the recruiter agent locally! Since the application utilizes Cloudflare's `Workers AI`, inference is fully supported out of the box without requiring you to configure any local `.env` API keys.
 
 ## 🌐 Remote Deployment
 
@@ -64,6 +78,12 @@ The application is completely configured for zero-downtime deployments directly 
 npm run deploy
 ```
 
-## Authors
+## 👨‍💻 About the Author
 **Kabir Sheikh**
-Candidate for the Cloudflare Summer 2026 Engineering Internship.
+*Candidate for the Cloudflare Summer 2026 Engineering Internship.*
+
+Hi! I am an ambitious software engineer and a student at the **University of South Florida (USF)**. I am deeply passionate about distributed systems, edge computing, and full-stack development. Building this project allowed me to dive deep into Cloudflare's Developer Platform—specifically exploring how we can leverage the network edge to completely replace traditional cloud architectures with lightning-fast APIs like Workers AI and Durable Objects. 
+
+I built this Stateful Recruiter AI to demonstrate my ability to quickly adopt modern frameworks (Cloudflare Agents SDK), architect resilient backends (Durable Objects state syncing), and craft beautiful, highly-responsive user interfaces (Vite + React + Kumo UI). 
+
+Feel free to check out my [GitHub Profile](https://github.com/kabir-cs) for more of my work!
