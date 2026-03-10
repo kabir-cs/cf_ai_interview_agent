@@ -82,7 +82,7 @@ npm run deploy
 **Kabir Sheikh**
 *Candidate for the Cloudflare Summer 2026 Engineering Internship.*
 
-Hi! I am an ambitious software engineer and a student at the **University of South Florida (USF)**. I am deeply passionate about distributed systems, edge computing, and full-stack development. Building this project allowed me to dive deep into Cloudflare's Developer Platform—specifically exploring how we can leverage the network edge to completely replace traditional cloud architectures with lightning-fast APIs like Workers AI and Durable Objects. 
+Hi! I am an ambitious software engineer and a student at the **University of South Florida (USF)**. I am deeply passionate about distributed systems, edge computing, and fullstack development. Building this project allowed me to dive deep into Cloudflare's Developer Platform specifically exploring how we can leverage the network edge to completely replace traditional cloud architectures with lightning fast APIs like Workers AI and Durable Objects. 
 
 I built this Stateful Recruiter AI to demonstrate my ability to quickly adopt modern frameworks (Cloudflare Agents SDK), architect resilient backends (Durable Objects state syncing), and craft beautiful, highly-responsive user interfaces (Vite + React + Kumo UI). 
 
